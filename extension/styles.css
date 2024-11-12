@@ -1,0 +1,140 @@
+/* Chat Button Style */
+/* Chat button styling */
+#chatButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Subtle shadow */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 9999;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+}
+
+#chatButton:hover {
+  transform: scale(1.1);  /* Scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* More prominent shadow on hover */
+}
+
+#chatButton:active {
+  transform: scale(1);  /* Return to normal size when clicked */
+}
+
+#chatButton i {
+  font-size: 24px;  /* Icon size */
+  color: white;  /* Icon color */
+}
+
+/* Chat Window */
+#chatWindow {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  height: 400px;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+
+/* Chat Header */
+#chatWindow .header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  text-align: center;
+}
+
+/* Chat Content Area */
+#chatWindow .content {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+/* Messages */
+/* Base styling for all messages */
+.message {
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 70%;
+  word-wrap: break-word;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+/* User's messages (align to the left by default) */
+.message.user {
+  background-color: #81C784;
+  color: white;
+  align-self: flex-end;  /* Align user message to the left */
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Server's messages (align to the right) */
+.message.server {
+  background-color: #f0f0f0;
+  color: black;
+  align-self: flex-start;  /* Align server message to the right */
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* Optional: Add more specific styling for better visual appeal */
+.message.server,
+.message.user {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+}
+
+/* Chat Input Section */
+#chatWindow .inputSection {
+  display: flex;
+  border-top: 2px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+#chatWindow input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#chatWindow button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+#chatWindow button[type="submit"]:hover {
+  background-color: #45a049;
+}
