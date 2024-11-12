@@ -12,37 +12,30 @@ This project is a Chrome extension that integrates a YouTube chat feature with a
 ## Installation
 
 ### 1. Clone the Repository
-bash
-Copy code
-git clone https://github.com/yourusername/youtube-chat-extension.git
-cd youtube-chat-extension
+`git clone https://github.com/yourusername/youtube-chat-extension.git`
 
 ### 2. Set Up the Backend
+`pip install -r requirements.txt`
 
-Prerequisites:
-Python 3.7 or higher
-Install the required dependencies:
-bash
-Copy code
-pip install -r requirements.txt
 Running the Flask Server:
-Make sure you have set up the .env file with the appropriate API keys for Gemini AI and any other environment-specific configurations.
+`python app.py`
 
-bash
-Copy code
-python app.py
 The Flask server will run at http://localhost:8000. Make sure your backend is running before loading the extension.
+
+Make sure you have set up the .env file with the appropriate API keys for Gemini AI and any other environment-specific configurations.
 
 ### 3. Set Up the Chrome Extension
 Load the Extension in Chrome:
+
 Open Chrome and go to chrome://extensions/.
+
 Enable Developer mode (toggle in the top right corner).
+
 Click Load unpacked and select the extension/ folder inside this project.
+
 ### 4. Configure the .env File
 In the project directory, create a .env file and set the following environment variables:
 
-makefile
-Copy code
 GEMINI_API_KEY=your_gemini_api_key
 ### 5. Usage
 Once the extension is loaded and the Flask backend is running, visit any YouTube video with a live chat.
